@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work with me — The Second Helping</title>
+<meta name="description" content="Weekly newsletters written for Ayurvedic and functional nutrition practices, gut health brands, and clinicians — in your voice, by hand.">
+<meta name="theme-color" content="#eceadf">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work with me — The Second Helping">
+<meta property="og:description" content="Weekly newsletters written for Ayurvedic and functional nutrition practices, gut health brands, and clinicians.">
+<meta property="og:url" content="https://riddhitanna.vercel.app/work.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eceadf;
+    --paper-deep:#e2e0d2;
+    --ink:#1d1f1a;
+    --ink-soft:#4f5249;
+    --ink-faint:#62645a;
+    --accent:#842538;
+    --accent-deep:#621a28;
+    --rule:#d3d1c2;
+    --rule-soft:#dedccf;
+
+    --serif:"Spectral",Georgia,"Times New Roman",serif;
+    --grotesk:"Fraunces",Georgia,serif;
+    --sans:"DM Sans",system-ui,sans-serif;
+
+    --step-00:.78rem;
+    --step-0:1.2rem;
+    --step-1:1.4rem;
+    --step-2:1.75rem;
+    --step-3:2.3rem;
+    --step-4:clamp(2.4rem,5vw,3.4rem);
+
+    --leading-body:1.72;
+    --measure:66ch;
+
+    --edge:clamp(1.2rem,3.5vw,3.4rem);
+    --maxw:1280px;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:var(--step-0);
+    line-height:var(--leading-body);
+    font-variant-numeric:oldstyle-nums;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 var(--edge);}
+
+  a{color:inherit;}
+  ::selection{background:var(--accent);color:var(--paper);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px;}
+
+  /* ---------- masthead (shared with home) ---------- */
+  .masthead{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1.5rem 2rem;flex-wrap:nowrap;
+    padding-top:clamp(1.6rem,3vw,2.4rem);
+    padding-bottom:1.2rem;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .masthead-brand a{display:inline-block;}
+  nav.top{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.6rem;align-items:baseline;font-optical-sizing:auto;}
+  nav.top a{text-decoration:none;color:var(--ink);transition:color .2s;}
+  nav.top a:hover{color:var(--accent);}
+  nav.top a.nav-cta{color:var(--accent);font-weight:500;}
+  nav.top a.nav-cta:hover{color:var(--accent-deep);}
+  nav.top a[aria-current="page"]{border-bottom:1px solid var(--accent);padding-bottom:.2em;}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.4rem;color:var(--ink);line-height:1;flex-shrink:0;z-index:201;}
+  .nav-toggle .bar{display:block;width:20px;height:1.5px;background:currentColor;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease;}
+  .nav-toggle .bar+.bar{margin-top:5px;}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .nav-overlay{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:#3a0f18;
+    opacity:0;transition:opacity .35s ease;
+  }
+  .nav-overlay.is-open{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 var(--edge);}
+  .nav-overlay.is-visible{opacity:.96;}
+  .nav-overlay a{
+    font-family:var(--serif);font-size:clamp(1.8rem,6vw,2.6rem);font-weight:400;
+    color:var(--paper);text-decoration:none;letter-spacing:-.01em;
+    padding:.5rem 0;opacity:0;transform:translateY(12px);
+    transition:opacity .3s ease,transform .3s ease,color .2s;
+    border-bottom:1px solid rgba(255,255,255,.08);width:100%;
+  }
+  .nav-overlay a:last-child{border-bottom:none;}
+  .nav-overlay.is-visible a{opacity:1;transform:none;}
+  .nav-overlay.is-visible a:nth-child(1){transition-delay:.08s;}
+  .nav-overlay.is-visible a:nth-child(2){transition-delay:.14s;}
+  .nav-overlay.is-visible a:nth-child(3){transition-delay:.2s;}
+  .nav-overlay.is-visible a:nth-child(4){transition-delay:.26s;}
+  .nav-overlay a:hover{color:var(--accent);}
+  .nav-close{
+    position:absolute;top:clamp(1.4rem,3vw,2rem);right:var(--edge);
+    background:none;border:none;color:var(--paper);cursor:pointer;
+    font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;
+    text-transform:uppercase;opacity:.6;transition:opacity .2s;
+  }
+  .nav-close:hover{opacity:1;}
+
+  /* nameplate block */
+  .nameplate-block{padding:clamp(1.6rem,3vw,2.4rem) 0 clamp(.4rem,1vw,.8rem);}
+  .nameplate{
+    font-family:var(--grotesk);font-weight:500;
+    font-size:clamp(2rem,4vw,2.9rem);font-optical-sizing:auto;
+    letter-spacing:-.018em;line-height:1;text-decoration:none;
+    color:var(--accent);margin-left:-.04em;display:inline-block;
+  }
+  .masthead-meta{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem;font-optical-sizing:auto;}
+
+  /* ---------- work layout ---------- */
+  .work{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(13rem,22vw,16rem);
+    gap:clamp(2.5rem,6vw,5rem);
+    padding:clamp(2.4rem,5vw,3.6rem) 0 0;
+    border-top:1px solid var(--rule);
+    align-items:start;
+  }
+  .work-main{min-width:0;}
+  .kicker{font-family:var(--grotesk);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.2rem,2.5vw,1.8rem);}
+  h1.work-title{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.14;
+    letter-spacing:-.012em;margin:0 0 1.6rem;max-width:26ch;
+  }
+  .rule-thin{border:0;border-top:1px solid var(--rule);margin:0 0 2.2rem;max-width:7rem;}
+
+  .work-main p{max-width:var(--measure);margin:0 0 1.3em;}
+  .work-lead{font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:var(--ink);}
+  .work-main .plain{font-family:var(--sans);color:var(--ink);}
+
+  h2.work-h{
+    font-family:var(--serif);font-weight:400;
+    font-size:var(--step-2);line-height:1.2;
+    margin:3rem 0 1rem;
+  }
+  h2.work-h .num{
+    display:block;font-family:var(--sans);
+    font-size:var(--step-00);letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:.55rem;
+  }
+
+  .pullquote{
+    margin:clamp(2.4rem,5vw,3.2rem) 0;padding:0;border:0;
+    font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.3rem);
+    line-height:1.2;font-weight:400;letter-spacing:-.01em;color:var(--ink);max-width:24ch;
+  }
+  .pullquote::before{content:"";display:block;width:3rem;height:2px;background:var(--accent);margin-bottom:1.3rem;}
+
+  ul.work-list{margin:0 0 1.3em;padding:0;list-style:none;max-width:var(--measure);font-family:var(--sans);}
+  ul.work-list li{position:relative;padding-left:1.5rem;margin-bottom:.7em;color:var(--ink);}
+  ul.work-list li::before{content:"";position:absolute;left:0;top:.8em;width:.7rem;height:1px;background:var(--accent);}
+
+  a.inline{
+    color:inherit;text-decoration:none;
+    background-image:linear-gradient(var(--accent),var(--accent));
+    background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%;
+    padding-bottom:.06em;transition:color .2s;
+  }
+  a.inline:hover{color:var(--accent);}
+
+  .contact{margin-top:3.4rem;border-top:1px solid var(--rule);padding-top:1.6rem;}
+  .contact .addr{font-family:var(--serif);font-size:var(--step-2);display:inline-block;margin:.2rem 0 .8rem;color:var(--accent);border-bottom:1px solid var(--accent);text-decoration:none;}
+  .contact .addr:hover{color:var(--accent-deep);border-color:var(--accent-deep);}
+
+  /* rail */
+  .rail{font-family:var(--grotesk);font-size:var(--step-00);color:var(--ink-soft);line-height:1.65;align-self:start;border-top:2px solid var(--ink);padding-top:1rem;}
+  .rail .block{padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--rule);}
+  .rail .block:last-child{border-bottom:0;margin-bottom:0;}
+  .rail h3{font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .8rem;}
+  .rail p{margin:0 0 .4em;max-width:none;color:var(--ink);font-size:.95rem;letter-spacing:.01em;}
+  .rail a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .rail a:hover{border-color:var(--accent);}
+
+  /* ---------- footer (shared) ---------- */
+  footer{border-top:1px solid var(--rule);padding:clamp(2rem,4vw,3rem) 0;background:var(--paper-deep);margin-top:clamp(3rem,6vw,4.5rem);}
+  .foot-grid{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+  .foot-name{font-family:var(--sans);font-size:var(--step-0);font-weight:500;}
+  .foot-nav{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.6rem;flex-wrap:wrap;}
+  .foot-nav a{text-decoration:none;color:var(--ink-soft);}
+  .foot-nav a:hover{color:var(--accent);}
+  .foot-copy{font-family:var(--sans);font-size:.72rem;letter-spacing:.08em;color:var(--ink-faint);margin-top:1.2rem;text-transform:uppercase;}
+
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;}
+    .reveal.d1{animation-delay:.08s;}
+    .reveal.d2{animation-delay:.16s;}
+    @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  }
+
+  @media (max-width:760px){
+    .work{grid-template-columns:1fr;gap:clamp(2rem,6vw,2.6rem);}
+    .rail{border-top:1px solid var(--rule);}
+    .nav-toggle{display:flex;flex-direction:column;justify-content:center;}
+    nav.top{display:none;}
+    .masthead{position:sticky;top:0;z-index:150;background:var(--paper);transition:transform .35s cubic-bezier(.4,0,.2,1);}
+    .masthead.nav-hidden{transform:translateY(-100%);}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-brand">
+      <a href="index.html" aria-label="The Second Helping home"><img src="logo.png" alt="" aria-hidden="true" style="height:clamp(2.4rem,4vw,3.2rem);width:auto;display:block;"></a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="top" id="primary-nav" aria-label="Primary">
+      <a href="index.html#essays">Essays</a>
+      <a href="index.html#about">About</a>
+      <a href="work.html" class="nav-cta" aria-current="page">Work with me</a>
+      <a href="index.html#subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <div class="work">
+
+    <main class="work-main reveal d1">
+      <p class="kicker">Work with me</p>
+      <h1 class="work-title">I write weekly newsletters for founders and practitioners in food and health who know more than they have time to write down.</h1>
+      <hr class="rule-thin">
+
+      <p class="work-lead">Most newsletters in health and wellness are written by someone who has read about the subject rather than practised it. You can tell. The advice is correct and weightless. It could have been assembled by anyone, about anything, and usually was.</p>
+
+      <p class="plain">If you run a practice or a food and wellness brand, you have the opposite problem. You know the material in your hands. You have watched it work on some people and not others, and you know why. What you do not have is a free hour on Tuesday.</p>
+
+      <p class="plain">That gap is the thing I write into.</p>
+
+      <h2 class="work-h">What this is</h2>
+      <p class="plain">One newsletter a week, in your voice. I give shape and form to your thoughts. I do the drafting and the editing. You give me a short call, or a voice note, or five lines of scrawl, whichever is least annoying that week. Nothing is sent that you have not read first.</p>
+
+      <p class="plain">I work with Ayurvedic and functional nutrition practices, gut health and food brands, and clinicians who would rather be with patients than in a document.</p>
+
+      <h2 class="work-h">What it is not</h2>
+      <ul class="work-list">
+        <li>No listicles, no protocol roundups, nothing that opens with five signs your gut is inflamed.</li>
+        <li>No AI drafting. Every newsletter is written by hand, which is slower and the entire point.</li>
+        <li>No overselling. If a claim will not hold, I will say so before it goes out under your name.</li>
+      </ul>
+
+      <h2 class="work-h">Why me</h2>
+      <p class="plain">I write <a class="inline" href="https://thesecondhelpings.substack.com/">The Second Helping</a>, an essay newsletter about food, body and culture. I am studying Gut Health Nutrition and Ayurveda. And, I have faced health issues myself which led me to writing — especially for food and health practitioners because it's very close to my heart.</p>
+
+      <section class="contact">
+        <h2 class="work-h" style="margin-top:0">To begin</h2>
+        <p class="plain">Write to me at</p>
+        <a class="addr" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>
+        <p class="plain">Tell me what you would have sent your list this week, if you'd had the time. I will give it the shape it deserves.</p>
+      </section>
+    </main>
+
+    <aside class="rail reveal d2">
+      <div class="block">
+        <h3>Who this is for</h3>
+        <p>Ayurvedic practices</p>
+        <p>Functional nutrition clinics</p>
+        <p>Gut health and food brands</p>
+        <p>Nutritionists and dieticians in practice</p>
+      </div>
+      <div class="block">
+        <h3>The shape of it</h3>
+        <p>Four newsletters a month, one fixed send day, written from a short call or a voice note. Draft to you Thursday, out Monday, or whatever rhythm your list already knows.</p>
+      </div>
+      <div class="block">
+        <h3>Reading</h3>
+        <p>If you want to know how I write before you write to me, start with <a href="index.html#essays">the essays</a>.</p>
+      </div>
+    </aside>
+
+  </div>
+
+</div>
+
+  <footer>
+    <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-name">The Second Helping</div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="index.html#essays">Essays</a>
+        <a href="index.html#about">About</a>
+        <a href="https://thesecondhelpings.substack.com">Newsletter &#8599;</a>
+        <a href="mailto:riddhitanna11@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="foot-copy">© 2026 Riddhi Tanna</p>
+    </div>
+  </footer>
+
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="nav-close" id="nav-close">Close</button>
+  <a href="index.html#essays">Essays</a>
+  <a href="index.html#about">About</a>
+  <a href="work.html">Work with me</a>
+  <a href="index.html#subscribe">Subscribe</a>
+</div>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var overlay = document.getElementById('nav-overlay');
+    var closeBtn = document.getElementById('nav-close');
+    if(!btn||!overlay) return;
+    function openMenu(){
+      overlay.classList.add('is-open');
+      requestAnimationFrame(function(){ overlay.classList.add('is-visible'); });
+      btn.setAttribute('aria-expanded','true');
+      document.body.style.overflow='hidden';
+    }
+    function closeMenu(){
+      overlay.classList.remove('is-visible');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+      setTimeout(function(){ overlay.classList.remove('is-open'); }, 350);
+    }
+    btn.addEventListener('click', function(){
+      btn.getAttribute('aria-expanded')==='true' ? closeMenu() : openMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  })();
+</script>
+<script>
+  (function(){
+    var masthead = document.querySelector('.masthead');
+    if(!masthead) return;
+    var lastY = window.scrollY;
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){
+        var y = window.scrollY;
+        if(y > lastY && y > 90){
+          masthead.classList.add('nav-hidden');
+        } else if(y < lastY){
+          masthead.classList.remove('nav-hidden');
+        }
+        lastY = y;
+        ticking = false;
+      });
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>

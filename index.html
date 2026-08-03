@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Second Helping — Riddhi Tanna</title>
+<meta name="description" content="Essays on food and culture by Riddhi Tanna, written from the lived perspective of a sensitive stomach that has very strong opinions.">
+<meta name="theme-color" content="#eceadf">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Second Helping — Riddhi Tanna">
+<meta property="og:description" content="Essays on food and culture, from the lived perspective of a sensitive stomach that has very strong opinions.">
+<meta property="og:url" content="https://riddhitanna.vercel.app">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eceadf;
+    --paper-deep:#e2e0d2;
+    --ink:#1d1f1a;
+    --ink-soft:#4f5249;
+    --ink-faint:#62645a;
+    --accent:#842538;
+    --accent-deep:#621a28;
+    --rule:#d3d1c2;
+    --rule-soft:#dedccf;
+
+    --serif:"Spectral",Georgia,"Times New Roman",serif;
+    --grotesk:"Fraunces",Georgia,serif;
+    --sans:"DM Sans",system-ui,sans-serif;
+
+    --step-00:.78rem;
+    --step-0:1.2rem;
+    --step-1:1.4rem;
+    --step-2:1.75rem;
+    --step-3:2.3rem;
+    --step-4:clamp(2.4rem,5vw,3.4rem);
+    --step-hero:clamp(2.5rem,5.4vw,4.4rem);
+
+    --leading-body:1.72;
+    --measure:72ch;
+
+    --gap:clamp(4.5rem,9vw,8rem);
+    --edge:clamp(1.2rem,3.5vw,3.4rem);
+    --maxw:1280px;
+  }
+
+  *{box-sizing:border-box;}
+  h1,h2,h3,h4,.section-label,.subscribe h2,.hero-line{font-family:var(--serif);}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:var(--step-0);
+    line-height:var(--leading-body);
+    font-variant-numeric:oldstyle-nums;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  /* faint paper grain */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 var(--edge);}
+
+  a{color:inherit;}
+  ::selection{background:var(--accent);color:var(--paper);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px;}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1.5rem 2rem;flex-wrap:nowrap;
+    padding-top:clamp(1.6rem,3vw,2.4rem);
+    padding-bottom:1.2rem;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .nameplate-logo{height:clamp(3.5rem,6vw,5rem);width:auto;display:block;}
+  .nameplate-block{padding:clamp(1.6rem,3vw,2.4rem) 0 clamp(.4rem,1vw,.8rem);}
+  .nameplate{
+    font-family:var(--grotesk);
+    font-weight:500;
+    font-size:clamp(2rem,4vw,2.9rem);
+    font-optical-sizing:auto;
+    letter-spacing:-.018em;
+    line-height:1;
+    text-decoration:none;
+    color:var(--accent);
+    margin-left:-.04em;
+    display:inline-block;
+  }
+  .masthead-meta{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem;font-optical-sizing:auto;}
+  nav.top{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.6rem;align-items:baseline;font-optical-sizing:auto;}
+  nav.top a{text-decoration:none;color:var(--ink);transition:color .2s;}
+  nav.top a:hover{color:var(--accent);}
+  nav.top a.nav-cta{color:var(--accent);font-weight:500;}
+  nav.top a.nav-cta:hover{color:var(--accent-deep);}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.4rem;color:var(--ink);line-height:1;flex-shrink:0;z-index:201;}
+  .nav-toggle .bar{display:block;width:20px;height:1.5px;background:currentColor;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease;}
+  .nav-toggle .bar+.bar{margin-top:5px;}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  /* overlay */
+  .nav-overlay{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:#3a0f18;
+    opacity:0;transition:opacity .35s ease;
+  }
+  .nav-overlay.is-open{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 var(--edge);}
+  .nav-overlay.is-visible{opacity:.96;}
+  .nav-overlay a{
+    font-family:var(--serif);font-size:clamp(1.8rem,6vw,2.6rem);font-weight:400;
+    color:var(--paper);text-decoration:none;letter-spacing:-.01em;
+    padding:.5rem 0;opacity:0;transform:translateY(12px);
+    transition:opacity .3s ease,transform .3s ease,color .2s;
+    border-bottom:1px solid rgba(255,255,255,.08);width:100%;
+  }
+  .nav-overlay a:last-child{border-bottom:none;}
+  .nav-overlay.is-visible a{opacity:1;transform:none;}
+  .nav-overlay.is-visible a:nth-child(1){transition-delay:.08s;}
+  .nav-overlay.is-visible a:nth-child(2){transition-delay:.14s;}
+  .nav-overlay.is-visible a:nth-child(3){transition-delay:.2s;}
+  .nav-overlay.is-visible a:nth-child(4){transition-delay:.26s;}
+  .nav-overlay a:hover{color:var(--accent);}
+  .nav-close{
+    position:absolute;top:clamp(1.4rem,3vw,2rem);right:var(--edge);
+    background:none;border:none;color:var(--paper);cursor:pointer;
+    font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;
+    text-transform:uppercase;opacity:.6;transition:opacity .2s;
+  }
+  .nav-close:hover{opacity:1;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(1.8rem,3.5vw,3rem) 0 clamp(1.6rem,3vw,2.6rem);position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(15rem,26vw,22rem);gap:clamp(2.5rem,5vw,4.5rem);align-items:center;}
+  .hero-figure{margin:0;align-self:center;}
+  .hero-figure img{width:100%;height:auto;display:block;border-radius:18px;}
+  .hero-logo{position:absolute;top:0;right:0;width:clamp(80px,10vw,110px);mix-blend-mode:multiply;opacity:.85;pointer-events:none;}
+  .hero-grid{display:block;}
+  .kicker{font-family:var(--grotesk);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.4rem,3vw,2.2rem);}
+  .hero-line{
+    font-family:var(--serif);
+    font-size:clamp(1.6rem,2.8vw,2.4rem);
+    line-height:1.18;
+    font-weight:400;
+    letter-spacing:-.008em;
+    margin:0;
+    max-width:38ch;
+  }
+  .hero-line .turn{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-.01em;}
+  .hero-sub{
+    font-family:var(--sans);
+    font-size:var(--step-1);
+    color:var(--ink-soft);
+    line-height:1.5;
+    max-width:52ch;
+    margin:clamp(2rem,4vw,2.8rem) 0 0;
+    font-weight:300;
+  }
+  .hero-attrib{
+    font-family:var(--sans);
+    font-size:var(--step-1);
+    letter-spacing:.08em;
+    color:var(--ink-faint);
+    margin:1.4rem 0 0;
+    text-transform:uppercase;
+  }
+  .hero-attrib cite{font-style:italic;color:var(--ink-soft);}
+  .hero-cta{margin-top:clamp(2.4rem,5vw,3.4rem);}
+  .inklink{
+    font-family:var(--sans);
+    font-size:var(--step-00);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink);
+    border-bottom:1px solid var(--accent);
+    padding-bottom:.25em;
+    transition:color .2s,border-color .2s;
+  }
+  .inklink:hover{color:var(--accent);border-color:var(--accent-deep);}
+  .inklink .arr{display:inline-block;transition:transform .2s;}
+  .inklink:hover .arr{transform:translateX(3px);}
+
+  /* ---------- editor's note (asymmetric) ---------- */
+  .note{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(13rem,22vw,16rem);
+    gap:clamp(2.5rem,6vw,5rem);
+    padding:clamp(1.8rem,3.5vw,3rem) 0 clamp(1.6rem,3vw,2.6rem);
+    border-top:1px solid var(--rule);
+  }
+  .note-body{max-width:60ch;}
+  .section-label{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep) !important;font-weight:600;margin:0 0 1.8rem;font-optical-sizing:auto;}
+  .note-body p:not(.section-label){font-family:var(--sans);margin:0 0 1.15em;color:var(--ink);}
+  .note-body .signoff{font-style:italic;color:var(--ink-soft);margin-top:1.6rem;}
+  .note-rail{font-family:var(--grotesk);font-size:var(--step-00);line-height:1.65;border-top:2px solid var(--ink);padding-top:1rem;align-self:start;}
+  .note-figure{margin:0;align-self:start;}
+  .note-figure img{width:100%;height:auto;display:block;border-radius:2px;}
+  .note-figure figcaption{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-top:.7rem;}
+  .note-rail dt{letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);margin-top:1.15rem;font-size:.72rem;}
+  .note-rail dt:first-child{margin-top:0;}
+  .note-rail dd{margin:.25rem 0 0;color:var(--ink);font-size:.95rem;letter-spacing:.01em;}
+  .note-rail dd a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .note-rail dd a:hover{border-color:var(--accent);}
+
+  /* ---------- essays ---------- */
+  .essays{padding:clamp(1.8rem,3.5vw,3rem) 0 0;border-top:1px solid var(--rule);}
+  .essays-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.6rem;margin-bottom:clamp(2.6rem,5vw,3.6rem);}
+  .essays-head h2{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep);margin:0;font-weight:600;font-optical-sizing:auto;}
+  .essays-head .all{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .essays-head .all:hover{color:var(--ink);border-color:var(--accent);}
+
+  /* featured */
+  .featured{display:grid;grid-template-columns:minmax(0,1fr) clamp(13rem,22vw,16rem);gap:clamp(2.5rem,6vw,5rem);padding-bottom:clamp(3rem,6vw,4.5rem);margin-bottom:clamp(2.6rem,5vw,3.4rem);border-bottom:1px solid var(--rule);}
+  .featured-meta{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;}
+  .featured-meta .here{color:var(--accent-deep);}
+  .featured-img{width:100%;max-height:320px;object-fit:cover;object-position:0 92%;display:block;border-radius:2px;margin-bottom:1.8rem;}
+  .featured h3{font-size:var(--step-4);line-height:1.06;font-weight:400;letter-spacing:-.01em;margin:0 0 1.2rem;}
+  .featured h3 a{text-decoration:none;}
+  .featured h3 a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px;}
+  .featured .excerpt{font-family:var(--sans);max-width:72ch;color:var(--ink-soft);margin:0 0 1.6rem;}
+  .featured .excerpt::first-letter{font-size:1.05em;}
+  .featured-aside{align-self:end;font-family:var(--grotesk);font-size:var(--step-00);color:var(--ink-faint);line-height:1.6;letter-spacing:.02em;}
+  .featured-aside .second-helping{display:block;margin-top:.8rem;color:var(--ink-soft);font-style:normal;}
+
+  /* index list */
+  .index{list-style:none;margin:0;padding:0;}
+  .index li{border-bottom:1px solid var(--rule-soft);}
+  .index a{
+    display:grid;
+    grid-template-columns:2.6rem minmax(0,1fr) auto;
+    gap:0 clamp(1rem,3vw,2.2rem);
+    align-items:baseline;
+    text-decoration:none;
+    padding:clamp(1.3rem,3vw,1.9rem) 0;
+    transition:padding-left .25s ease;
+  }
+  .index a:hover{padding-left:.5rem;}
+  .index .num{font-family:var(--sans);font-size:var(--step-00);color:var(--accent);letter-spacing:.04em;}
+  .index .title{font-family:var(--serif);font-size:var(--step-2);line-height:1.15;font-weight:400;}
+  .index .dek{display:block;font-family:var(--sans);font-size:1rem;color:var(--ink-faint);line-height:1.5;margin-top:.4rem;max-width:52ch;font-weight:300;}
+  .index .src{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;padding-top:.4em;}
+  .index a:hover .title{color:var(--accent-deep);}
+  .index a:hover .src{color:var(--accent);}
+
+  /* ---------- subscribe (concept tie, not a card) ---------- */
+  .subscribe{padding:clamp(2.6rem,5vw,4rem) 0;}
+  .subscribe-inner{max-width:72ch;}
+  .subscribe h2{font-size:var(--step-3);line-height:1.12;font-weight:400;letter-spacing:-.01em;margin:0 0 1rem;}
+  .subscribe h2 em{color:var(--accent);}
+  .subscribe p{font-family:var(--sans);color:var(--ink-soft);margin:0 0 2rem;max-width:72ch;}
+  .subform{display:flex;align-items:flex-end;gap:1.2rem;flex-wrap:wrap;border-bottom:2px solid var(--rule);padding-bottom:.7rem;max-width:30rem;transition:border-color .2s;}
+  .hero-subform{margin-top:clamp(2rem,4vw,2.8rem);}
+  .subform:focus-within{border-bottom-color:var(--ink);}
+  .subform label{font-family:var(--sans);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:.45rem;}
+  .subform input{flex:1;min-width:11rem;border:0;background:transparent;font-family:var(--serif);font-size:var(--step-0);color:var(--ink);padding:0;}
+  .subform input::placeholder{color:var(--ink-faint);font-style:italic;}
+  .subform input:focus{outline:none;}
+  .subform button{
+    font-family:var(--sans);font-size:var(--step-00);letter-spacing:.09em;text-transform:uppercase;
+    background:none;border:0;color:var(--accent);cursor:pointer;padding:0;white-space:nowrap;
+    transition:color .2s;
+  }
+  .subform button:hover{color:var(--accent-deep);}
+
+  /* ---------- commission ---------- */
+  .commission{padding:0 0 clamp(1.8rem,3.5vw,3rem);}
+  .commission-inner{display:grid;grid-template-columns:clamp(13rem,22vw,16rem) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:baseline;border-top:1px solid var(--rule);padding-top:clamp(2.4rem,5vw,3.4rem);}
+  .commission .section-label{margin:0;color:var(--ink) !important;}
+  .commission p:not(.section-label){font-family:var(--sans);margin:0;max-width:50ch;color:var(--ink);font-size:var(--step-1);line-height:1.5;}
+  .commission a.mail{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);white-space:nowrap;}
+  .commission a.mail:hover{color:var(--accent-deep);}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--rule);padding:clamp(2rem,4vw,3rem) 0;background:var(--paper-deep);}
+  .foot-grid{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+  .foot-name{font-family:var(--sans);font-size:var(--step-0);font-weight:500;}
+  .foot-nav{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.6rem;flex-wrap:wrap;}
+  .foot-nav a{text-decoration:none;color:var(--ink-soft);}
+  .foot-nav a:hover{color:var(--accent);}
+  .foot-copy{font-family:var(--sans);font-size:.72rem;letter-spacing:.08em;color:var(--ink-faint);margin-top:1.2rem;text-transform:uppercase;}
+
+  /* ---------- motion (purely additive; content is always visible without JS) ---------- */
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;}
+    .reveal.d1{animation-delay:.08s;}
+    .reveal.d2{animation-delay:.16s;}
+    .reveal.d3{animation-delay:.24s;}
+    @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+    /* below-fold sections only hide once JS confirms it can reveal them */
+    .js-reveal.is-hidden{opacity:0;transform:translateY(18px);}
+    .js-reveal.is-in{opacity:1;transform:none;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:760px){
+    .note,.featured,.commission-inner{grid-template-columns:1fr;}
+    .hero{grid-template-columns:1fr;gap:clamp(1.8rem,5vw,2.6rem);}
+    .hero-figure{order:-1;max-width:22rem;}
+    .note-rail{border-top:1px solid var(--rule);padding-top:1.4rem;}
+    .featured-aside{align-self:start;}
+    .index a{grid-template-columns:1.8rem minmax(0,1fr);grid-template-rows:auto auto;}
+    .index .src{grid-column:2;padding-top:.6em;}
+    .commission-inner .section-label{margin-bottom:.4rem;}
+    .foot-nav{text-align:left;}
+    .nav-toggle{display:flex;flex-direction:column;justify-content:center;}
+    nav.top{display:none;}
+    .masthead-brand{flex-direction:column;align-items:flex-start !important;gap:.4rem !important;}
+    .masthead{
+      position:sticky;top:0;z-index:150;
+      background:var(--paper);
+      transition:transform .35s cubic-bezier(.4,0,.2,1);
+    }
+    .masthead.nav-hidden{transform:translateY(-100%);}
+  }
+  @media (max-width:420px){
+    .hero{max-width:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-brand">
+      <a href="index.html" aria-label="The Second Helping home"><img src="logo.png" alt="" aria-hidden="true" style="height:clamp(2.4rem,4vw,3.2rem);width:auto;display:block;"></a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="top" id="primary-nav" aria-label="Primary">
+      <a href="#essays">Essays</a>
+      <a href="#about">About</a>
+      <a href="work.html" class="nav-cta">Work with me</a>
+      <a href="#subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <div class="nameplate-block">
+    <a href="index.html" class="nameplate">The Second Helping</a>
+    <div class="masthead-meta">Essays on food &amp; culture · By <strong>Riddhi Tanna</strong></div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-text">
+<h1 class="hero-line reveal d1">"I hold up the spoon as a veil for my hands so none of the food <span class="turn">bleeds onto them.</span>"</h1>
+      <p class="hero-attrib reveal d1"><a class="inklink" href="https://thesecondhelpings.substack.com/p/a-veil-for-my-hand" target="_blank" rel="noopener"><em style="text-transform:none;">Read</em> A veil for my hand <span class="arr">&rarr;</span></a></p>
+      <p class="hero-sub reveal d2">Essays written from the lived perspective of a sensitive stomach that has very strong opinions, about how we eat, how we live in our bodies, and the traditions we inherit.</p>
+      <form class="subform hero-subform reveal d2" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+        <div style="flex:1;min-width:11rem;">
+          <label for="hero-email">New essays when they're ready — in your inbox</label>
+          <input id="hero-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <button type="submit">Subscribe &rarr;</button>
+      </form>
+      </div>
+      <figure class="hero-figure reveal d2">
+        <img src="mango.jpg" alt="A hand holding a ripe mango above a basket of mangoes" loading="lazy">
+      </figure>
+    </section>
+
+    <!-- EDITOR'S NOTE -->
+    <section class="note" id="about" aria-label="About Riddhi">
+      <div class="note-body">
+        <p class="section-label">About</p>
+        <p class="lede">I came to food and culture writing sideways. I spent a couple of years in tech product management, which is a profession that teaches you to study how people behave — what they reach for by default, what they avoid, what they justify to themselves as rational when it's actually something older and less examined.</p>
+        <p>I left that work as it outpaced me, and took the habit of observation with me. The subject that kept appearing was food: not as nutrition, not as aesthetics, but as a record of how people actually live. What families cook on a weeknight. What gets packed in a tiffin box and why. What recipes survive the move to a new city and which ones don't make it.</p>
+        <p>My own body has been an unusually loud teacher. I cook and eat with minimal chilli, gluten, lactose, and foods that generate heat — not as a diet, but because my body made that decision for me. Working around those restrictions led me to Ayurveda - as a system that had already thought carefully about what the body does with food, when, and why. And so, my grounding is in Ayurveda.</p>
+        <p>What I write about is the space between those things: inherited knowledge and lived experiment, cultural practice and personal digestion, the food that comes from elsewhere and the body that receives it. I'm interested in what looks like less and turns out to be more.</p>
+      </div>
+    </section>
+
+    <!-- ESSAYS -->
+    <section class="essays" id="essays" aria-label="Essays">
+      <div class="essays-head">
+        <h2>Essays</h2>
+      </div>
+
+      <!-- featured -->
+      <article class="featured">
+        <div>
+<h3><a href="essay-inheritance.html">One teaspoon short of inheritance</a></h3>
+          <img class="featured-img" src="https://substackcdn.com/image/fetch/$s_!Kjts!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde447383-b640-41da-b1e6-e6361d64d2d5_1024x1536.png" alt="Sukhadi cut into diamond pieces" loading="lazy">
+          <p class="excerpt">My mother never needed to measure, and I couldn't stop measuring. But for sukhadi, a Gujarati sweet of just three ingredients, she gave me the exact amounts. There was nowhere to hide. The first time, I couldn't believe ghee and flour went in almost a one-to-one ratio. Years of reading up on portion control made me think better answers existed somewhere far from home. On one side stood my fear of weight gain. On the other, my mother's craft.</p>
+          <a class="inklink" href="essay-inheritance.html">Read the essay <span class="arr">&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- index -->
+      <ol class="index">
+        <li><a href="https://thesecondhelpings.substack.com/p/the-art-of-eating-the-same-meals">
+          <span class="num">01</span>
+          <span><span class="title">The art of eating the same meals everyday</span>
+          <span class="dek">On the quiet comfort of repetition, and what it means to have sustainable health routines.</span></span>
+          <span class="src">Read &#8599;</span>
+        </a></li>
+        <li><a href="https://thesecondhelpings.substack.com/p/the-rebellion-of-packing-your-own">
+          <span class="num">02</span>
+          <span><span class="title">The rebellion of packing your own meals</span>
+          <span class="dek">On tiffin boxes, food from home, and the small act of resistance in not eating what everyone else is eating.</span></span>
+          <span class="src">Read &#8599;</span>
+        </a></li>
+        <li><a href="https://thesecondhelpings.substack.com/p/when-restraint-feels-like-deprivation">
+          <span class="num">03</span>
+          <span><span class="title">When restraint feels like deprivation</span>
+          <span class="dek">On how restraint is experienced depending on the perspective we choose.</span></span>
+          <span class="src">Read &#8599;</span>
+        </a></li>
+        <li><a href="https://thesecondhelpings.substack.com/p/the-girl-with-no-ambition">
+          <span class="num">04</span>
+          <span><span class="title">The girl with no ambition</span>
+          <span class="dek">On stepping off a path that made sense on paper, and what the world makes out of mainstream ambition.</span></span>
+          <span class="src">Read &#8599;</span>
+        </a></li>
+      </ol>
+    </section>
+
+    <!-- SUBSCRIBE: the second helping, as an idea -->
+    <section class="subscribe" id="subscribe" aria-label="Subscribe">
+      <div class="subscribe-inner">
+        <h2>There is always space for a <em>second helping.</em></h2>
+        <p>Essays arriving in your inbox when they're ready. No schedule, no noise.</p>
+        <form class="subform" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <div style="flex:1;min-width:11rem;">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- COMMISSION -->
+    <section class="commission" id="work" aria-label="Work together">
+      <div class="commission-inner">
+        <p class="section-label">Work with me</p>
+        <div>
+          <p>I also write weekly newsletters for Ayurvedic and functional-nutrition practices, gut-health and food brands, and clinicians who know their material and never find the hour to write it down. <a class="mail" href="work.html">How that works &rarr;</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+</div>
+
+  <footer>
+    <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-name">The Second Helping</div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#essays">Essays</a>
+        <a href="#about">About</a>
+        <a href="https://thesecondhelpings.substack.com">Newsletter &#8599;</a>
+        <a href="mailto:riddhitanna11@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="foot-copy">© 2026 Riddhi Tanna</p>
+    </div>
+  </footer>
+
+<script>
+  // Scroll reveal as progressive enhancement only.
+  // Content is visible by default; we hide-then-reveal only when JS + IntersectionObserver
+  // are available and motion is allowed. If anything is missing, content simply stays visible.
+  (function(){
+    var ok = 'IntersectionObserver' in window &&
+             window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+    if(!ok) return;
+    var els = document.querySelectorAll('.note, .essays, .subscribe, .commission');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.remove('is-hidden'); e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(el){ el.classList.add('js-reveal','is-hidden'); io.observe(el); });
+  })();
+</script>
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="nav-close" id="nav-close">Close</button>
+  <a href="#essays">Essays</a>
+  <a href="#about">About</a>
+  <a href="work.html">Work with me</a>
+  <a href="#subscribe">Subscribe</a>
+</div>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var overlay = document.getElementById('nav-overlay');
+    var closeBtn = document.getElementById('nav-close');
+    if(!btn||!overlay) return;
+    function openMenu(){
+      overlay.classList.add('is-open');
+      requestAnimationFrame(function(){ overlay.classList.add('is-visible'); });
+      btn.setAttribute('aria-expanded','true');
+      document.body.style.overflow='hidden';
+    }
+    function closeMenu(){
+      overlay.classList.remove('is-visible');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+      setTimeout(function(){ overlay.classList.remove('is-open'); }, 350);
+    }
+    btn.addEventListener('click', function(){
+      btn.getAttribute('aria-expanded')==='true' ? closeMenu() : openMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  })();
+</script>
+<script>
+  // Smart sticky header (mobile): hide on scroll down, reveal on scroll up.
+  (function(){
+    var masthead = document.querySelector('.masthead');
+    if(!masthead) return;
+    var lastY = window.scrollY;
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){
+        var y = window.scrollY;
+        if(y > lastY && y > 90){
+          masthead.classList.add('nav-hidden');
+        } else if(y < lastY){
+          masthead.classList.remove('nav-hidden');
+        }
+        lastY = y;
+        ticking = false;
+      });
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>
