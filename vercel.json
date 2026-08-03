@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/work", "destination": "/work-with-me", "permanent": true },
+    { "source": "/work.html", "destination": "/work-with-me", "permanent": true }
+  ]
 }
