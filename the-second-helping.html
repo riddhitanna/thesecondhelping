@@ -206,6 +206,8 @@
   }
   .note-body{max-width:60ch;}
   .section-label{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep) !important;font-weight:600;margin:0 0 1.8rem;font-optical-sizing:auto;}
+  /* standard section heading (site-wide) */
+  .sec-h{font-family:var(--serif);font-weight:500;font-size:var(--step-2);line-height:1.2;letter-spacing:-.01em;text-transform:none;color:var(--accent-deep);margin:0 0 1.3rem;}
   .note-body p:not(.section-label){font-family:var(--sans);margin:0 0 1.15em;color:var(--ink);}
   .note-body .signoff{font-style:italic;color:var(--ink-soft);margin-top:1.6rem;}
   .note-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);}
@@ -223,7 +225,7 @@
   /* ---------- essays ---------- */
   .essays{padding:clamp(1.8rem,3.5vw,3rem) 0 0;border-top:1px solid var(--rule);}
   .essays-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.6rem;margin-bottom:clamp(2.6rem,5vw,3.6rem);}
-  .essays-head h2{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep);margin:0;font-weight:600;font-optical-sizing:auto;}
+  .essays-head h2{font-family:var(--serif);font-size:var(--step-2);letter-spacing:-.01em;text-transform:none;color:var(--accent-deep);margin:0;font-weight:500;font-optical-sizing:auto;}
   .essays-head .all{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--rule);}
   .essays-head .all:hover{color:var(--ink);border-color:var(--accent);}
 
@@ -282,9 +284,9 @@
 
   /* ---------- commission ---------- */
   .commission{padding:0 0 clamp(1.8rem,3.5vw,3rem);}
-  .commission-inner{display:grid;grid-template-columns:clamp(13rem,22vw,16rem) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:baseline;border-top:1px solid var(--rule);padding-top:clamp(2.4rem,5vw,3.4rem);}
-  .commission .section-label{margin:0;color:var(--ink) !important;}
-  .commission p:not(.section-label){font-family:var(--sans);margin:0;max-width:50ch;color:var(--ink);font-size:var(--step-1);line-height:1.5;}
+  .commission-inner{border-top:1px solid var(--rule);padding-top:clamp(2.4rem,5vw,3.4rem);}
+  .commission p{font-family:var(--sans);margin:0 0 1.1em;max-width:60ch;color:var(--ink);font-size:var(--step-1);line-height:1.5;}
+  .commission p:last-child{margin-bottom:0;}
   .commission a.mail{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);white-space:nowrap;}
   .commission a.mail:hover{color:var(--accent-deep);}
 
@@ -384,10 +386,11 @@
     <!-- EDITOR'S NOTE -->
     <section class="note" id="about" aria-label="About Riddhi">
       <div class="note-body">
-        <p class="section-label">About</p>
-        <p class="lede">I help founders of food and health companies turn half-finished ideas into newsletters people actually read.</p>
-        <p>Before becoming a writer, I worked across business, engineering and product in startups, learning how to turn messy ideas into clear narratives. After a health breakdown, I became deeply interested in gut health, food systems and Ayurveda. That curiosity eventually became The Second Helping, my newsletter on food, body and culture, and it's also why I love working with founders building in this space.</p>
-        <p>Tell me what you would have sent out this week if you had the time at <a href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>.</p>
+        <h2 class="sec-h">How I got to writing this</h2>
+        <p class="lede">I came to food and culture writing sideways. I spent a couple of years in tech product management, which is a profession that teaches you to study how people behave — what they reach for by default, what they avoid, what they justify to themselves as rational when it's actually something older and less examined.</p>
+        <p>I left that work as it outpaced me, and took the habit of observation with me. The subject that kept appearing was food: not as nutrition, not as aesthetics, but as a record of how people actually live. What families cook on a weeknight. What gets packed in a tiffin box and why. What recipes survive the move to a new city and which ones don't make it.</p>
+        <p>My own body has been an unusually loud teacher. I cook and eat with minimal chilli, gluten, lactose, and foods that generate heat — not as a diet, but because my body made that decision for me. Working around those restrictions led me to Ayurveda — as a system that had already thought carefully about what the body does with food, when, and why. And so, my grounding is in Ayurveda.</p>
+        <p>What I write about is the space between those things: inherited knowledge and lived experiment, cultural practice and personal digestion, the food that comes from elsewhere and the body that receives it. I'm interested in what looks like less and turns out to be more.</p>
       </div>
     </section>
 
@@ -451,13 +454,12 @@
       </div>
     </section>
 
-    <!-- COMMISSION -->
-    <section class="commission" id="work" aria-label="Work together">
+    <!-- CONTACT -->
+    <section class="commission" id="contact" aria-label="Contact">
       <div class="commission-inner">
-        <p class="section-label">Work with me</p>
-        <div>
-          <p>I also write weekly newsletters for Ayurvedic and functional-nutrition practices, gut-health and food brands, and clinicians who know their material and never find the hour to write it down. <a class="mail" href="/work-with-me">How that works &rarr;</a></p>
-        </div>
+        <h2 class="sec-h">Let's get your thoughts in shape</h2>
+        <p>Write to me at <a class="mail" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a></p>
+        <p>Tell me what you would have sent out this week if you had the time.</p>
       </div>
     </section>
 
