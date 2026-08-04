@@ -85,6 +85,10 @@
     position:relative;
   }
   .masthead-brand a{display:inline-block;}
+  .monogram{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1;letter-spacing:-.02em;text-decoration:none;display:inline-block;white-space:nowrap;}
+  .monogram .m-a{font-style:italic;color:var(--ink);font-weight:400;}
+  .monogram .m-slash{color:var(--ink-faint);font-weight:400;padding:0 .02em;}
+  .monogram .m-b{font-weight:600;color:var(--accent);}
   nav.top{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.6rem;align-items:baseline;font-optical-sizing:auto;}
   nav.top a{text-decoration:none;color:var(--ink);transition:color .2s;}
   nav.top a:hover{color:var(--accent);}
@@ -232,7 +236,7 @@
 
   <header class="masthead">
     <div class="masthead-brand">
-      <a href="/" aria-label="The Second Helping home"><img src="logo.png" alt="" aria-hidden="true" style="height:clamp(2.4rem,4vw,3.2rem);width:auto;display:block;"></a>
+      <a href="/" class="monogram" aria-label="Riddhi Tanna home"><span class="m-a">r</span><span class="m-slash">/</span><span class="m-b">t</span></a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="bar"></span>
@@ -240,10 +244,10 @@
       <span class="bar"></span>
     </button>
     <nav class="top" id="primary-nav" aria-label="Primary">
-      <a href="/#essays">Essays</a>
-      <a href="/#about">About</a>
       <a href="/work-with-me" class="nav-cta" aria-current="page">Work with me</a>
-      <a href="/#subscribe">Subscribe</a>
+      <a href="/the-second-helping">The Second Helping</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </header>
 
@@ -290,7 +294,7 @@
         <p>Nutritionists and dieticians in practice</p>
       </div>
       <div class="block">
-        <p>If you want to know how I write before you write to me, start with <a href="/#essays">the essays</a>.</p>
+        <p>If you want to know how I write before you write to me, start with <a href="/the-second-helping#essays">the essays</a>.</p>
       </div>
     </aside>
 
@@ -301,11 +305,11 @@
   <footer>
     <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-name">The Second Helping</div>
+      <div class="foot-name">Riddhi Tanna</div>
       <nav class="foot-nav" aria-label="Footer">
-        <a href="/#essays">Essays</a>
+        <a href="/work-with-me">Work with me</a>
+        <a href="/the-second-helping">The Second Helping</a>
         <a href="/#about">About</a>
-        <a href="https://thesecondhelpings.substack.com">Newsletter &#8599;</a>
         <a href="mailto:riddhitanna11@gmail.com">Email</a>
       </nav>
     </div>
@@ -315,10 +319,10 @@
 
 <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
   <button class="nav-close" id="nav-close">Close</button>
-  <a href="/#essays">Essays</a>
-  <a href="/#about">About</a>
   <a href="/work-with-me">Work with me</a>
-  <a href="/#subscribe">Subscribe</a>
+  <a href="/the-second-helping">The Second Helping</a>
+  <a href="/#about">About</a>
+  <a href="/#contact">Contact</a>
 </div>
 <script>
   (function(){

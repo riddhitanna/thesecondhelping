@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Second Helping — Riddhi Tanna</title>
-<meta name="description" content="Essays on food and culture by Riddhi Tanna, written from the lived perspective of a sensitive stomach that has very strong opinions.">
+<title>Riddhi Tanna — Writer</title>
+<meta name="description" content="I help founders of food and health companies turn half-finished ideas into newsletters people actually read.">
 <meta name="theme-color" content="#eceadf">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Second Helping — Riddhi Tanna">
-<meta property="og:description" content="Essays on food and culture, from the lived perspective of a sensitive stomach that has very strong opinions.">
+<meta property="og:title" content="Riddhi Tanna — Writer">
+<meta property="og:description" content="I help founders of food and health companies turn half-finished ideas into newsletters people actually read.">
 <meta property="og:url" content="https://riddhitanna.com">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,6 +143,39 @@
     text-transform:uppercase;opacity:.6;transition:opacity .2s;
   }
   .nav-close:hover{opacity:1;}
+
+  /* ---------- rt monogram + brand ---------- */
+  .monogram{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1;letter-spacing:-.02em;text-decoration:none;display:inline-block;white-space:nowrap;}
+  .monogram .m-a{font-style:italic;color:var(--ink);font-weight:400;}
+  .monogram .m-slash{color:var(--ink-faint);font-weight:400;padding:0 .02em;}
+  .monogram .m-b{font-weight:600;color:var(--accent);}
+
+  /* ---------- primary CTA button ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;
+    color:var(--paper);background:var(--accent);
+    padding:.9em 1.7em;border-radius:3px;text-decoration:none;
+    transition:background .2s;
+  }
+  .btn:hover{background:var(--accent-deep);}
+  .btn .arr{display:inline-block;transition:transform .2s;}
+  .btn:hover .arr{transform:translateX(3px);}
+  .hero-actions{display:flex;align-items:center;gap:clamp(1.2rem,3vw,2rem);flex-wrap:wrap;margin-top:clamp(2rem,4vw,2.8rem);}
+
+  /* ---------- generic content sections ---------- */
+  .band{padding:clamp(2.4rem,5vw,3.6rem) 0;border-top:1px solid var(--rule);}
+  .band .section-label{margin:0 0 1.4rem;}
+  .band p{font-family:var(--sans);color:var(--ink);max-width:62ch;margin:0 0 1.15em;}
+  .band p:last-child{margin-bottom:0;}
+  .band a.inline{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .band a.inline:hover{color:var(--accent-deep);}
+  .lede-big{font-family:var(--serif) !important;font-size:var(--step-1);line-height:1.5;color:var(--ink);}
+
+  /* ---------- 'read the newsletter' block ---------- */
+  .next-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(15rem,26vw,22rem);gap:clamp(2rem,5vw,4rem);align-items:center;}
+  .next-figure{margin:0;}
+  .next-figure img{width:100%;height:auto;display:block;border-radius:18px;}
 
   /* ---------- hero ---------- */
   .hero{padding:clamp(1.8rem,3.5vw,3rem) 0 clamp(1.6rem,3vw,2.6rem);position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(15rem,26vw,22rem);gap:clamp(2.5rem,5vw,4.5rem);align-items:center;}
@@ -339,7 +372,7 @@
 
   <header class="masthead">
     <div class="masthead-brand">
-      <a href="/" aria-label="The Second Helping home"><img src="logo.png" alt="" aria-hidden="true" style="height:clamp(2.4rem,4vw,3.2rem);width:auto;display:block;"></a>
+      <a href="/" class="monogram" aria-label="Riddhi Tanna home"><span class="m-a">r</span><span class="m-slash">/</span><span class="m-b">t</span></a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="bar"></span>
@@ -347,117 +380,54 @@
       <span class="bar"></span>
     </button>
     <nav class="top" id="primary-nav" aria-label="Primary">
-      <a href="#essays">Essays</a>
-      <a href="#about">About</a>
       <a href="/work-with-me" class="nav-cta">Work with me</a>
-      <a href="#subscribe">Subscribe</a>
+      <a href="/the-second-helping">The Second Helping</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="nameplate-block">
-    <a href="/" class="nameplate">The Second Helping</a>
-    <div class="masthead-meta">Essays on food &amp; culture · By <strong>Riddhi Tanna</strong></div>
+    <a href="/" class="nameplate">Riddhi Tanna</a>
+    <div class="masthead-meta">Newsletter writing for founders in food &amp; health</div>
   </div>
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO: work-led -->
     <section class="hero" aria-label="Introduction">
       <div class="hero-text">
-<h1 class="hero-line reveal d1">"I hold up the spoon as a veil for my hands so none of the food <span class="turn">bleeds onto them.</span>"</h1>
-      <p class="hero-attrib reveal d1"><a class="inklink" href="https://thesecondhelpings.substack.com/p/a-veil-for-my-hand" target="_blank" rel="noopener"><em style="text-transform:none;">Read</em> A veil for my hand <span class="arr">&rarr;</span></a></p>
-      <p class="hero-sub reveal d2">Essays written from the lived perspective of a sensitive stomach that has very strong opinions, about how we eat, how we live in our bodies, and the traditions we inherit.</p>
-      <form class="subform hero-subform reveal d2" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
-        <div style="flex:1;min-width:11rem;">
-          <label for="hero-email">New essays when they're ready — in your inbox</label>
-          <input id="hero-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
-        </div>
-        <button type="submit">Subscribe &rarr;</button>
-      </form>
+<h1 class="hero-line reveal d1">I help founders in food and health turn half-finished ideas into <span class="turn">newsletters people actually read.</span></h1>
+      <p class="hero-sub reveal d2">One newsletter a week, in your voice. You bring the thinking — a call, a voice note, five lines of scrawl — and I do the drafting and the editing. Written by hand, never by a machine.</p>
+      <div class="hero-actions reveal d2">
+        <a class="btn" href="/work-with-me">Work with me <span class="arr">&rarr;</span></a>
+        <a class="inklink" href="/the-second-helping">Read The Second Helping <span class="arr">&rarr;</span></a>
+      </div>
       </div>
       <figure class="hero-figure reveal d2">
         <img src="mango.jpg" alt="A hand holding a ripe mango above a basket of mangoes" loading="lazy">
       </figure>
     </section>
 
-    <!-- EDITOR'S NOTE -->
-    <section class="note" id="about" aria-label="About Riddhi">
-      <div class="note-body">
-        <p class="section-label">About</p>
-        <p class="lede">I help founders of food and health companies turn half-finished ideas into newsletters people actually read.</p>
-        <p>Before becoming a writer, I worked across business, engineering and product in startups, learning how to turn messy ideas into clear narratives. After a health breakdown, I became deeply interested in gut health, food systems and Ayurveda. That curiosity eventually became The Second Helping, my newsletter on food, body and culture, and it's also why I love working with founders building in this space.</p>
-        <p>Tell me what you would have sent out this week if you had the time at <a href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>.</p>
-      </div>
+    <!-- ABOUT -->
+    <section class="band" id="about" aria-label="About Riddhi">
+      <p class="section-label">About</p>
+      <p class="lede-big">Before becoming a writer, I worked across business, engineering and product in startups, learning how to turn messy ideas into clear narratives.</p>
+      <p>After a health breakdown, I became deeply interested in gut health, food systems and Ayurveda. That curiosity eventually became The Second Helping, my newsletter on food, body and culture, and it's also why I love working with founders building in this space.</p>
     </section>
 
-    <!-- ESSAYS -->
-    <section class="essays" id="essays" aria-label="Essays">
-      <div class="essays-head">
-        <h2>Essays</h2>
-      </div>
-
-      <!-- featured -->
-      <article class="featured">
-        <div>
-<h3><a href="/essay-inheritance">One teaspoon short of inheritance</a></h3>
-          <img class="featured-img" src="https://substackcdn.com/image/fetch/$s_!Kjts!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde447383-b640-41da-b1e6-e6361d64d2d5_1024x1536.png" alt="Sukhadi cut into diamond pieces" loading="lazy">
-          <p class="excerpt">My mother never needed to measure, and I couldn't stop measuring. But for sukhadi, a Gujarati sweet of just three ingredients, she gave me the exact amounts. There was nowhere to hide. The first time, I couldn't believe ghee and flour went in almost a one-to-one ratio. Years of reading up on portion control made me think better answers existed somewhere far from home. On one side stood my fear of weight gain. On the other, my mother's craft.</p>
-          <a class="inklink" href="/essay-inheritance">Read the essay <span class="arr">&rarr;</span></a>
-        </div>
-      </article>
-
-      <!-- index -->
-      <ol class="index">
-        <li><a href="https://thesecondhelpings.substack.com/p/the-art-of-eating-the-same-meals">
-          <span class="num">01</span>
-          <span><span class="title">The art of eating the same meals everyday</span>
-          <span class="dek">On the quiet comfort of repetition, and what it means to have sustainable health routines.</span></span>
-          <span class="src">Read &#8599;</span>
-        </a></li>
-        <li><a href="https://thesecondhelpings.substack.com/p/the-rebellion-of-packing-your-own">
-          <span class="num">02</span>
-          <span><span class="title">The rebellion of packing your own meals</span>
-          <span class="dek">On tiffin boxes, food from home, and the small act of resistance in not eating what everyone else is eating.</span></span>
-          <span class="src">Read &#8599;</span>
-        </a></li>
-        <li><a href="https://thesecondhelpings.substack.com/p/when-restraint-feels-like-deprivation">
-          <span class="num">03</span>
-          <span><span class="title">When restraint feels like deprivation</span>
-          <span class="dek">On how restraint is experienced depending on the perspective we choose.</span></span>
-          <span class="src">Read &#8599;</span>
-        </a></li>
-        <li><a href="https://thesecondhelpings.substack.com/p/the-girl-with-no-ambition">
-          <span class="num">04</span>
-          <span><span class="title">The girl with no ambition</span>
-          <span class="dek">On stepping off a path that made sense on paper, and what the world makes out of mainstream ambition.</span></span>
-          <span class="src">Read &#8599;</span>
-        </a></li>
-      </ol>
+    <!-- THE SECOND HELPING (secondary) -->
+    <section class="band" id="newsletter" aria-label="The Second Helping">
+      <p class="section-label">The Second Helping</p>
+      <p class="lede-big">My newsletter on food, body and culture — essays written from the lived perspective of a sensitive stomach that has very strong opinions.</p>
+      <p><a class="inline" href="/the-second-helping">Read The Second Helping &rarr;</a></p>
     </section>
 
-    <!-- SUBSCRIBE: the second helping, as an idea -->
-    <section class="subscribe" id="subscribe" aria-label="Subscribe">
-      <div class="subscribe-inner">
-        <h2>There is always space for a <em>second helping.</em></h2>
-        <p>Essays arriving in your inbox when they're ready. No schedule, no noise.</p>
-        <form class="subform" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
-          <div style="flex:1;min-width:11rem;">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
-          </div>
-          <button type="submit">Subscribe &rarr;</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- COMMISSION -->
-    <section class="commission" id="work" aria-label="Work together">
-      <div class="commission-inner">
-        <p class="section-label">Work with me</p>
-        <div>
-          <p>I also write weekly newsletters for Ayurvedic and functional-nutrition practices, gut-health and food brands, and clinicians who know their material and never find the hour to write it down. <a class="mail" href="/work-with-me">How that works &rarr;</a></p>
-        </div>
-      </div>
+    <!-- CONTACT -->
+    <section class="band" id="contact" aria-label="Contact">
+      <p class="section-label">Contact</p>
+      <p class="lede-big">Tell me what you would have sent out this week if you had the time.</p>
+      <p>Write to me at <a class="inline" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>.</p>
     </section>
 
   </main>
@@ -468,11 +438,11 @@
   <footer>
     <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-name">The Second Helping</div>
+      <div class="foot-name">Riddhi Tanna</div>
       <nav class="foot-nav" aria-label="Footer">
-        <a href="#essays">Essays</a>
+        <a href="/work-with-me">Work with me</a>
+        <a href="/the-second-helping">The Second Helping</a>
         <a href="#about">About</a>
-        <a href="https://thesecondhelpings.substack.com">Newsletter &#8599;</a>
         <a href="mailto:riddhitanna11@gmail.com">Email</a>
       </nav>
     </div>
@@ -488,7 +458,7 @@
     var ok = 'IntersectionObserver' in window &&
              window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
     if(!ok) return;
-    var els = document.querySelectorAll('.note, .essays, .subscribe, .commission');
+    var els = document.querySelectorAll('.band');
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if(e.isIntersecting){ e.target.classList.remove('is-hidden'); e.target.classList.add('is-in'); io.unobserve(e.target); }
@@ -499,10 +469,10 @@
 </script>
 <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
   <button class="nav-close" id="nav-close">Close</button>
-  <a href="#essays">Essays</a>
-  <a href="#about">About</a>
   <a href="/work-with-me">Work with me</a>
-  <a href="#subscribe">Subscribe</a>
+  <a href="/the-second-helping">The Second Helping</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
 </div>
 <script>
   (function(){
