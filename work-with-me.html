@@ -193,6 +193,10 @@
   }
   a.inline:hover{color:var(--accent);}
 
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--paper);background:var(--accent);padding:.9em 1.7em;border-radius:3px;text-decoration:none;transition:background .2s;margin-top:.4rem;}
+  .btn:hover{background:var(--accent-deep);}
+  .btn .arr{display:inline-block;transition:transform .2s;}
+  .btn:hover .arr{transform:translateX(3px);}
   .contact{margin-top:3.4rem;border-top:1px solid var(--rule);padding-top:1.6rem;}
   .contact .addr{font-family:var(--serif);font-size:var(--step-2);display:inline-block;margin:.2rem 0 .8rem;color:var(--accent);border-bottom:1px solid var(--accent);text-decoration:none;}
   .contact .addr:hover{color:var(--accent-deep);border-color:var(--accent-deep);}
@@ -280,12 +284,9 @@
 
       <section class="contact">
         <h2 class="work-h" style="margin-top:0">Let's get your thoughts in shape</h2>
-        <p class="plain">Write to me at <a class="inline" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>, or book a 30-minute call below.</p>
+        <p class="plain">Write to me at <a class="inline" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a>, or book a 30-minute call.</p>
         <p class="plain">Tell me what you would have sent out this week if you had the time.</p>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/riddhitanna11/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+        <p><a class="btn" href="https://calendly.com/riddhitanna11/30min" target="_blank" rel="noopener">Book a 30-minute call <span class="arr">&rarr;</span></a></p>
       </section>
     </main>
 
