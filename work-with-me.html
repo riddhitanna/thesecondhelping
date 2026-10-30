@@ -208,6 +208,21 @@
   }
   .pullquote::before{content:"";display:block;width:3rem;height:2px;background:var(--accent);margin-bottom:1.3rem;}
 
+  .plans{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;
+    max-width:var(--measure);margin:1.8rem 0 1.3em;
+  }
+  .plan{
+    border:1px solid var(--rule);border-top:3px solid var(--accent);
+    border-radius:3px;padding:1.4rem 1.5rem;background:var(--paper-deep);
+  }
+  .plan-name{
+    font-family:var(--serif);font-weight:500;font-size:var(--step-1);line-height:1.2;
+    color:var(--accent-deep);margin:0 0 .5rem;
+  }
+  .plan-detail{font-family:var(--sans);color:var(--ink-soft);margin:0;line-height:1.5;}
+  @media (max-width:600px){ .plans{grid-template-columns:1fr;} }
+
   ul.work-list{margin:0 0 1.3em;padding:0;list-style:none;max-width:var(--measure);font-family:var(--sans);}
   ul.work-list li{position:relative;padding-left:1.5rem;margin-bottom:.7em;color:var(--ink);}
   ul.work-list li::before{content:"";position:absolute;left:0;top:.8em;width:.7rem;height:1px;background:var(--accent);}
@@ -302,6 +317,17 @@
       <h2 class="work-h">How I Work</h2>
       <p class="plain">I understand you're busy building your business.</p>
       <p class="plain">You can give me a short call, a few voice notes, or a doc with rough ideas / brain dump and I'll take it from there. I'll convert it into <strong>a newsletter worth reading, in your voice.</strong> And I know AI slop is terrifyingly exhausting, so we won't be doing that.</p>
+
+      <div class="plans">
+        <div class="plan">
+          <h3 class="plan-name">Weekly newsletters</h3>
+          <p class="plan-detail">800&ndash;1000 word pieces, 4x a month.</p>
+        </div>
+        <div class="plan">
+          <h3 class="plan-name">Monthly newsletter</h3>
+          <p class="plan-detail">1500 word deep dive, once a month.</p>
+        </div>
+      </div>
 
       <section class="contact">
         <h2 class="work-h" style="margin-top:0">Let's get your thoughts in shape</h2>
