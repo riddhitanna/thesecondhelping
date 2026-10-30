@@ -150,9 +150,12 @@
   .nav-close:hover{opacity:1;}
 
   /* ---------- hero ---------- */
-  .hero{padding:clamp(1.8rem,3.5vw,3rem) 0 clamp(1.6rem,3vw,2.6rem);position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(15rem,26vw,22rem);gap:clamp(2.5rem,5vw,4.5rem);align-items:center;}
-  .hero-figure{margin:0;align-self:center;}
-  .hero-figure img{width:100%;height:auto;display:block;border-radius:18px;}
+  .hero{padding:clamp(1.8rem,3.5vw,3rem) 0 clamp(1.6rem,3vw,2.6rem);position:relative;}
+  /* 'A veil for my hand' feature inside the essay list */
+  .index li.veil-feature{display:grid;grid-template-columns:clamp(9rem,20vw,14rem) minmax(0,1fr);gap:clamp(1.4rem,4vw,2.6rem);align-items:center;padding:clamp(1.8rem,4vw,2.8rem) 0;}
+  .index .veil-img{width:100%;height:auto;display:block;border-radius:12px;}
+  .index .veil-quote{font-family:var(--serif);font-size:var(--step-2);line-height:1.22;color:var(--ink);margin:0;}
+  .index .veil-quote .turn{font-style:italic;color:var(--accent);}
   .hero-logo{position:absolute;top:0;right:0;width:clamp(80px,10vw,110px);mix-blend-mode:multiply;opacity:.85;pointer-events:none;}
   .hero-grid{display:block;}
   .kicker{font-family:var(--grotesk);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.4rem,3vw,2.2rem);}
@@ -323,6 +326,8 @@
     .note-rail{border-top:1px solid var(--rule);padding-top:1.4rem;}
     .featured-aside{align-self:start;}
     .index a{grid-template-columns:clamp(3.6rem,16vw,4.6rem) minmax(0,1fr);grid-template-rows:auto auto;}
+    .index li.veil-feature{grid-template-columns:1fr;gap:1.2rem;}
+    .index .veil-img{max-width:18rem;}
     .index .src{grid-column:2;padding-top:.6em;}
     .commission-inner .section-label{margin-bottom:.4rem;}
     .foot-nav{text-align:left;}
@@ -369,21 +374,14 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-text">
-<h1 class="hero-line reveal d1">"I hold up the spoon as a veil for my hands so none of the food <span class="turn">bleeds onto them.</span>"</h1>
-      <p class="hero-attrib reveal d1"><a class="inklink" href="https://thesecondhelpings.substack.com/p/a-veil-for-my-hand" target="_blank" rel="noopener"><em style="text-transform:none;">Read</em> A veil for my hand <span class="arr">&rarr;</span></a></p>
-      <form class="subform hero-subform reveal d2" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+    <section class="hero" aria-label="Subscribe">
+      <form class="subform hero-subform reveal d1" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
         <div style="flex:1;min-width:11rem;">
           <label for="hero-email">Subscribe to The Second Helping</label>
           <input id="hero-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
         </div>
         <button type="submit">Subscribe &rarr;</button>
       </form>
-      </div>
-      <figure class="hero-figure reveal d2">
-        <img src="mango.jpg" alt="A hand holding a ripe mango above a basket of mangoes" loading="lazy">
-      </figure>
     </section>
 
     <!-- ESSAYS -->
@@ -442,6 +440,10 @@
           <span class="dek">Notes on why I eat with a spoon but would rather not.</span></span>
           <span class="src">Read &#8599;</span>
         </a></li>
+        <li class="veil-feature">
+          <img class="veil-img" src="mango.jpg" alt="A hand holding a ripe mango above a basket of mangoes" loading="lazy">
+          <p class="veil-quote">"I hold up the spoon as a veil for my hands so none of the food <span class="turn">bleeds onto them.</span>"</p>
+        </li>
         <li><a target="_blank" rel="noopener" href="https://thesecondhelpings.substack.com/p/what-are-we-really-gifting">
           <span class="num">May 2026</span>
           <span><span class="title">What are we really gifting?</span>
@@ -539,7 +541,6 @@
     <section class="subscribe" id="subscribe" aria-label="Subscribe">
       <div class="subscribe-inner">
         <h2>There is always space for a <em>second helping.</em></h2>
-        <p>Essays arriving in your inbox when they're ready. No schedule, no noise.</p>
         <form class="subform" action="https://thesecondhelpings.substack.com/subscribe" method="get" target="_blank" rel="noopener">
           <div style="flex:1;min-width:11rem;">
             <label for="email">Your email</label>
