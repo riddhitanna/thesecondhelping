@@ -166,6 +166,21 @@
   .work-lead{font-family:var(--serif);font-size:var(--step-1);line-height:1.5;color:var(--ink);}
   .work-main .plain{font-family:var(--sans);color:var(--ink);}
 
+  .work-quote{
+    margin:2rem 0 2.2rem;padding:.2rem 0 .2rem 1.4rem;max-width:var(--measure);
+    border-left:2px solid var(--accent);
+  }
+  .work-main .work-quote p{
+    font-family:var(--serif);font-style:italic;font-size:var(--step-1);line-height:1.45;
+    color:var(--ink);margin:0 0 .6rem;
+  }
+  .work-quote cite{
+    display:block;font-family:var(--sans);font-style:normal;font-size:var(--step-00);
+    letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);
+  }
+  .work-quote cite::before{content:"\2014\00a0";}
+  h1.work-title--close{color:var(--accent-deep);margin:2.4rem 0 1rem;}
+
   h2.work-h{
     font-family:var(--serif);font-weight:500;
     font-size:var(--step-2);line-height:1.2;letter-spacing:-.01em;text-transform:none;
@@ -264,14 +279,18 @@
 
     <main class="work-main reveal d1">
       <p class="kicker">Work with me</p>
-      <h1 class="work-title">I write weekly newsletters for founders and practitioners in food and health who know more than they have time to write down.</h1>
       <hr class="rule-thin">
 
-      <p class="work-lead">Most newsletters in health and wellness are written by someone who has read about the subject rather than practised it. You can tell. The advice is correct and weightless. It could have been assembled by anyone, about anything, and usually was.</p>
+      <p class="work-lead">Founders are a sink of knowledge. They gather insights at unreal rates yet, most of them don't have time to share them.</p>
 
-      <p class="plain">If you run a practice or a food and wellness brand, you have the opposite problem. You know the material in your hands. You have watched it work on some people and not others, and you know why. You have too many ideas. What you want is someone to sit with you for an hour a week and turn your brain into writing you can send.</p>
+      <blockquote class="work-quote">
+        <p>&ldquo;It's good to learn from your own mistakes. It's better to learn from other people's mistakes.&rdquo;</p>
+        <cite>Warren Buffett</cite>
+      </blockquote>
 
-      <p class="plain">That gap is the thing I write into.</p>
+      <p class="plain">Founders learn so much by making mistakes that others don't have the courage to make. These mistakes produce invaluable lessons for others to learn from.</p>
+
+      <h1 class="work-title work-title--close">I help founders provide this value by getting their thoughts in shape in the form of newsletters.</h1>
 
       <h2 class="work-h">How I Work</h2>
       <p class="plain"><strong>One newsletter a week, in your voice.</strong> You give me a short call, or a voice note, or five lines of scrawl, whichever is the most feasible that week. Then, <strong>I give shape and form to your thoughts.</strong> I do the drafting and the editing.</p>
