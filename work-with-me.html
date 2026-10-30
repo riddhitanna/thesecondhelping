@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://riddhitanna.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#ffffff;
@@ -33,7 +33,7 @@
     --rule-soft:#dedccf;
 
     --serif:"Spectral",Georgia,"Times New Roman",serif;
-    --grotesk:"Fraunces",Georgia,serif;
+    --display:"Fraunces",Georgia,serif;
     --sans:"DM Sans",system-ui,sans-serif;
 
     --step-00:.78rem;
@@ -137,7 +137,7 @@
   /* nameplate block */
   .nameplate-block{padding:clamp(1.6rem,3vw,2.4rem) 0 clamp(.4rem,1vw,.8rem);}
   .nameplate{
-    font-family:var(--grotesk);font-weight:500;
+    font-family:var(--display);font-weight:500;
     font-size:clamp(2rem,4vw,2.9rem);font-optical-sizing:auto;
     letter-spacing:-.018em;line-height:1;text-decoration:none;
     color:var(--accent);margin-left:-.04em;display:inline-block;
@@ -154,9 +154,9 @@
     align-items:start;
   }
   .work-main{min-width:0;}
-  .kicker{font-family:var(--grotesk);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.2rem,2.5vw,1.8rem);}
+  .kicker{font-family:var(--display);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.2rem,2.5vw,1.8rem);}
   h1.work-heading{
-    font-family:var(--grotesk);font-weight:500;
+    font-family:var(--display);font-weight:500;
     font-size:var(--step-4);line-height:1.08;letter-spacing:-.015em;
     color:var(--accent-deep);margin:0 0 clamp(1.4rem,3vw,2rem);
   }
@@ -278,7 +278,7 @@
   .contact .addr:hover{color:var(--accent-deep);border-color:var(--accent-deep);}
 
   /* rail */
-  .rail{font-family:var(--grotesk);font-size:var(--step-00);color:var(--ink-soft);line-height:1.65;align-self:start;border-top:2px solid var(--ink);padding-top:1rem;}
+  .rail{font-family:var(--display);font-size:var(--step-00);color:var(--ink-soft);line-height:1.65;align-self:start;border-top:2px solid var(--ink);padding-top:1rem;}
   .rail .block{padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--rule);}
   .rail .block:last-child{border-bottom:0;margin-bottom:0;}
   .rail h3{font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .8rem;}
