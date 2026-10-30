@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://riddhitanna.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#ffffff;
@@ -32,7 +32,6 @@
     --rule:#d3d1c2;
     --rule-soft:#dedccf;
 
-    --serif:"Spectral",Georgia,"Times New Roman",serif;
     --display:"Fraunces",Georgia,serif;
     --sans:"DM Sans",system-ui,sans-serif;
 
@@ -53,7 +52,7 @@
   }
 
   *{box-sizing:border-box;}
-  h1,h2,h3,h4,.section-label,.subscribe h2,.hero-line{font-family:var(--serif);}
+  h1,h2,h3,h4,.section-label,.subscribe h2,.hero-line{font-family:var(--display);}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0;
@@ -128,7 +127,7 @@
   .nav-overlay.is-open{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 var(--edge);}
   .nav-overlay.is-visible{opacity:.96;}
   .nav-overlay a{
-    font-family:var(--serif);font-size:clamp(1.8rem,6vw,2.6rem);font-weight:400;
+    font-family:var(--sans);font-size:clamp(1.8rem,6vw,2.6rem);font-weight:400;
     color:var(--paper);text-decoration:none;letter-spacing:-.01em;
     padding:.5rem 0;opacity:0;transform:translateY(12px);
     transition:opacity .3s ease,transform .3s ease,color .2s;
@@ -150,7 +149,7 @@
   .nav-close:hover{opacity:1;}
 
   /* ---------- rt monogram + brand ---------- */
-  .monogram{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1;letter-spacing:-.02em;text-decoration:none;display:inline-block;white-space:nowrap;}
+  .monogram{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1;letter-spacing:-.02em;text-decoration:none;display:inline-block;white-space:nowrap;}
   .monogram .m-a{font-style:italic;color:var(--ink);font-weight:400;}
   .monogram .m-slash{color:var(--ink-faint);font-weight:400;padding:0 .02em;}
   .monogram .m-b{font-weight:600;color:var(--accent);}
@@ -171,12 +170,12 @@
   /* ---------- generic content sections ---------- */
   .band{padding:clamp(2.4rem,5vw,3.6rem) 0;border-top:1px solid var(--rule);}
   .band .section-label{margin:0 0 1.4rem;}
-  .sec-h{font-family:var(--serif);font-weight:500;font-size:var(--step-2);line-height:1.2;letter-spacing:-.01em;text-transform:none;color:var(--accent-deep);margin:0 0 1.3rem;}
+  .sec-h{font-family:var(--display);font-weight:500;font-size:var(--step-2);line-height:1.2;letter-spacing:-.01em;text-transform:none;color:var(--accent-deep);margin:0 0 1.3rem;}
   .band p{font-family:var(--sans);color:var(--ink);max-width:62ch;margin:0 0 1.15em;}
   .band p:last-child{margin-bottom:0;}
   .band a.inline{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);}
   .band a.inline:hover{color:var(--accent-deep);}
-  .lede-big{font-family:var(--serif) !important;font-size:var(--step-1);line-height:1.5;color:var(--ink);}
+  .lede-big{font-family:var(--sans) !important;font-size:var(--step-1);line-height:1.5;color:var(--ink);}
 
   /* ---------- 'read the newsletter' block ---------- */
   .next-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(15rem,26vw,22rem);gap:clamp(2rem,5vw,4rem);align-items:center;}
@@ -189,7 +188,7 @@
   .hero-grid{display:block;}
   .kicker{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.4rem,3vw,2.2rem);}
   .hero-line{
-    font-family:var(--serif);
+    font-family:var(--display);
     font-size:clamp(1.6rem,2.8vw,2.4rem);
     line-height:1.18;
     font-weight:400;
@@ -197,7 +196,7 @@
     margin:0;
     max-width:38ch;
   }
-  .hero-line .turn{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-.01em;}
+  .hero-line .turn{font-family:var(--display);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-.01em;}
   .hero-sub{
     font-family:var(--sans);
     font-size:var(--step-1);
@@ -241,12 +240,12 @@
     border-top:1px solid var(--rule);
   }
   .note-body{max-width:60ch;}
-  .section-label{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep) !important;font-weight:600;margin:0 0 1.8rem;font-optical-sizing:auto;}
+  .section-label{font-family:var(--display);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep) !important;font-weight:600;margin:0 0 1.8rem;font-optical-sizing:auto;}
   .note-body p:not(.section-label){font-family:var(--sans);margin:0 0 1.15em;color:var(--ink);}
   .note-body .signoff{font-style:italic;color:var(--ink-soft);margin-top:1.6rem;}
   .note-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);}
   .note-body a:hover{color:var(--accent-deep);}
-  .note-rail{font-family:var(--display);font-size:var(--step-00);line-height:1.65;border-top:2px solid var(--ink);padding-top:1rem;align-self:start;}
+  .note-rail{font-family:var(--sans);font-size:var(--step-00);line-height:1.65;border-top:2px solid var(--ink);padding-top:1rem;align-self:start;}
   .note-figure{margin:0;align-self:start;}
   .note-figure img{width:100%;height:auto;display:block;border-radius:2px;}
   .note-figure figcaption{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-top:.7rem;}
@@ -259,7 +258,7 @@
   /* ---------- essays ---------- */
   .essays{padding:clamp(1.8rem,3.5vw,3rem) 0 0;border-top:1px solid var(--rule);}
   .essays-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.6rem;margin-bottom:clamp(2.6rem,5vw,3.6rem);}
-  .essays-head h2{font-family:var(--serif);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep);margin:0;font-weight:600;font-optical-sizing:auto;}
+  .essays-head h2{font-family:var(--display);font-size:var(--step-1);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep);margin:0;font-weight:600;font-optical-sizing:auto;}
   .essays-head .all{font-family:var(--sans);font-size:var(--step-00);letter-spacing:.05em;color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--rule);}
   .essays-head .all:hover{color:var(--ink);border-color:var(--accent);}
 
@@ -273,7 +272,7 @@
   .featured h3 a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px;}
   .featured .excerpt{font-family:var(--sans);max-width:72ch;color:var(--ink-soft);margin:0 0 1.6rem;}
   .featured .excerpt::first-letter{font-size:1.05em;}
-  .featured-aside{align-self:end;font-family:var(--display);font-size:var(--step-00);color:var(--ink-faint);line-height:1.6;letter-spacing:.02em;}
+  .featured-aside{align-self:end;font-family:var(--sans);font-size:var(--step-00);color:var(--ink-faint);line-height:1.6;letter-spacing:.02em;}
   .featured-aside .second-helping{display:block;margin-top:.8rem;color:var(--ink-soft);font-style:normal;}
 
   /* index list */
@@ -290,7 +289,7 @@
   }
   .index a:hover{padding-left:.5rem;}
   .index .num{font-family:var(--sans);font-size:var(--step-00);color:var(--accent);letter-spacing:.04em;}
-  .index .title{font-family:var(--serif);font-size:var(--step-2);line-height:1.15;font-weight:400;}
+  .index .title{font-family:var(--display);font-size:var(--step-2);line-height:1.15;font-weight:400;}
   .index .dek{display:block;font-family:var(--sans);font-size:1rem;color:var(--ink-faint);line-height:1.5;margin-top:.4rem;max-width:52ch;font-weight:300;}
   .index .src{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;padding-top:.4em;}
   .index a:hover .title{color:var(--accent-deep);}
@@ -306,7 +305,7 @@
   .hero-subform{margin-top:clamp(2rem,4vw,2.8rem);}
   .subform:focus-within{border-bottom-color:var(--ink);}
   .subform label{font-family:var(--sans);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:.45rem;}
-  .subform input{flex:1;min-width:11rem;border:0;background:transparent;font-family:var(--serif);font-size:var(--step-0);color:var(--ink);padding:0;}
+  .subform input{flex:1;min-width:11rem;border:0;background:transparent;font-family:var(--sans);font-size:var(--step-0);color:var(--ink);padding:0;}
   .subform input::placeholder{color:var(--ink-faint);font-style:italic;}
   .subform input:focus{outline:none;}
   .subform button{
