@@ -156,6 +156,9 @@
   .index .veil-img{width:100%;height:auto;display:block;border-radius:12px;}
   .index .veil-quote{font-family:var(--serif);font-size:var(--step-2);line-height:1.22;color:var(--ink);margin:0;}
   .index .veil-quote .turn{font-style:italic;color:var(--accent);}
+  .index li.veil-right{grid-template-columns:minmax(0,1fr) clamp(9rem,20vw,14rem);}
+  .index li.veil-right .veil-img{grid-column:2;grid-row:1;}
+  .index li.veil-right .veil-quote{grid-column:1;grid-row:1;}
   .hero-logo{position:absolute;top:0;right:0;width:clamp(80px,10vw,110px);mix-blend-mode:multiply;opacity:.85;pointer-events:none;}
   .hero-grid{display:block;}
   .kicker{font-family:var(--grotesk);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 clamp(1.4rem,3vw,2.2rem);}
@@ -328,6 +331,7 @@
     .featured-aside{align-self:start;}
     .index a{grid-template-columns:clamp(3.6rem,16vw,4.6rem) minmax(0,1fr);grid-template-rows:auto auto;}
     .index li.veil-feature{grid-template-columns:1fr;gap:1.2rem;}
+    .index li.veil-right .veil-img,.index li.veil-right .veil-quote{grid-column:1;grid-row:auto;}
     .index .veil-img{max-width:18rem;}
     .index .src{grid-column:2;padding-top:.6em;}
     .commission-inner .section-label{margin-bottom:.4rem;}
@@ -431,7 +435,7 @@
           <span class="dek">Notes on why I eat with a spoon but would rather not.</span></span>
           <span class="src">Read &#8599;</span>
         </a></li>
-        <li class="veil-feature">
+        <li class="veil-feature veil-right">
           <img class="veil-img" src="mango.jpg" alt="A hand holding a ripe mango above a basket of mangoes" loading="lazy">
           <p class="veil-quote">"I hold up the spoon as a veil for my hands so none of the food <span class="turn">bleeds onto them.</span>"</p>
         </li>
