@@ -252,26 +252,6 @@
   .plan-btn .arr{display:inline-block;transition:transform .2s;}
   .plan-btn:hover .arr{transform:translateX(3px);}
 
-  /* inputs -> newsletter flow */
-  .flow{
-    margin:2.2rem 0 1.4em;max-width:var(--measure);
-    padding:clamp(1.4rem,3vw,2.2rem);border:1px solid var(--rule);
-    border-radius:6px;background:var(--paper-deep);
-  }
-  .flow-svg{display:block;width:100%;height:auto;}
-  .flow-ring{fill:var(--paper);stroke:var(--rule);stroke-width:1.5;}
-  .flow-ring-out{fill:var(--accent);stroke:var(--accent-deep);stroke-width:1.5;}
-  .flow-ic{fill:none;stroke:var(--accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-  .flow-ic-out{stroke:var(--paper);}
-  .flow-link{fill:none;stroke:var(--accent);stroke-width:1.6;opacity:.4;}
-  .flow-line{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
-  .flow-hub{fill:var(--accent);}
-  .flow-lbl{fill:var(--ink-soft);font-family:var(--sans);font-size:18px;letter-spacing:1.5px;}
-  .flow-lbl-out{fill:var(--accent-deep);font-weight:600;}
-  .flow-cap{
-    margin:1.2rem 0 0;text-align:center;
-    font-family:var(--serif);font-style:italic;font-size:var(--step-00);color:var(--ink-soft);
-  }
   .plan-list li::before{
     content:"";position:absolute;left:0;top:.62em;
     width:.55rem;height:.55rem;border:1px solid var(--accent);
@@ -374,38 +354,6 @@
       <p class="plain">I understand you're busy building your business.</p>
       <p class="plain">You can give me a short call, a few voice notes, or a doc with rough ideas / brain dump and I'll take it from there. I'll convert it into <strong>a newsletter worth reading, in your voice.</strong> And I know AI slop is terrifyingly exhausting, so we won't be doing that.</p>
 
-      <figure class="flow" aria-label="Short calls, voice notes and brain dumps merge into one newsletter">
-        <svg class="flow-svg" viewBox="0 0 720 400" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="flowSoft" x="-40%" y="-40%" width="180%" height="180%">
-              <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1d1f1a" flood-opacity="0.12"/>
-            </filter>
-          </defs>
-          <path class="flow-link" d="M156 70 C 290 70 330 190 424 190"/>
-          <path class="flow-link" d="M156 190 C 300 190 340 190 424 190"/>
-          <path class="flow-link" d="M156 310 C 290 310 330 190 424 190"/>
-          <circle class="flow-hub" cx="430" cy="190" r="6"/>
-          <path class="flow-line" d="M442 190 H 566"/>
-          <path class="flow-line" d="M558 181 L 568 190 L 558 199"/>
-
-          <circle class="flow-ring" cx="110" cy="70" r="46" filter="url(#flowSoft)"/>
-          <g class="flow-ic" transform="translate(110,70) scale(1.7) translate(-12,-12)"><path d="M4 5c0 9 7 16 16 16a1.5 1.5 0 0 0 1.5-1.5v-3a1 1 0 0 0-.8-1l-3.3-.7a1 1 0 0 0-1 .3l-1.3 1.5a12 12 0 0 1-5.7-5.7l1.5-1.3a1 1 0 0 0 .3-1L9.5 5.3a1 1 0 0 0-1-.8h-3A1.5 1.5 0 0 0 4 5z"/></g>
-          <text class="flow-lbl" x="110" y="142" text-anchor="middle">SHORT CALL</text>
-
-          <circle class="flow-ring" cx="110" cy="190" r="46" filter="url(#flowSoft)"/>
-          <g class="flow-ic" transform="translate(110,190) scale(1.7) translate(-12,-12)"><path d="M5 9v6M9 5v14M13 8v8M17 6v12M21 10v4"/></g>
-          <text class="flow-lbl" x="110" y="262" text-anchor="middle">VOICE NOTES</text>
-
-          <circle class="flow-ring" cx="110" cy="310" r="46" filter="url(#flowSoft)"/>
-          <g class="flow-ic" transform="translate(110,310) scale(1.7) translate(-12,-12)"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8.5 8.5h7M8.5 12h7M8.5 15.5h4.5"/></g>
-          <text class="flow-lbl" x="110" y="382" text-anchor="middle">BRAIN DUMP</text>
-
-          <circle class="flow-ring-out" cx="632" cy="190" r="62" filter="url(#flowSoft)"/>
-          <g class="flow-ic flow-ic-out" transform="translate(632,190) scale(2.3) translate(-12,-12)"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7 12 12.5 20.5 7"/></g>
-          <text class="flow-lbl flow-lbl-out" x="632" y="288" text-anchor="middle">NEWSLETTER</text>
-        </svg>
-        <figcaption class="flow-cap">However it reaches me, it leaves as a newsletter &mdash; in your voice.</figcaption>
-      </figure>
       <p class="plain">Choose from one of the plans below to get started with building your personal knowledge vault.</p>
 
       <div class="plans">
