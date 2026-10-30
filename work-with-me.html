@@ -238,6 +238,42 @@
     color:var(--ink-soft);line-height:1.5;
   }
   .plan-list li:last-child{margin-bottom:0;}
+  .plan-btn{
+    margin-top:1.4rem;align-self:flex-start;cursor:pointer;
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--sans);font-size:var(--step-00);letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent-deep);background:transparent;
+    border:1px solid var(--accent);border-radius:3px;padding:.7em 1.3em;
+    transition:background .2s,color .2s;
+  }
+  .plan-btn:hover{background:var(--accent);color:var(--paper);}
+  .plan-btn .arr{display:inline-block;transition:transform .2s;}
+  .plan-btn:hover .arr{transform:translateX(3px);}
+
+  .plan-dialog{
+    position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;
+    padding:1.5rem;background:rgba(29,31,26,.5);
+    opacity:0;transition:opacity .25s;
+  }
+  .plan-dialog[hidden]{display:none;}
+  .plan-dialog.is-visible{opacity:1;}
+  .plan-dialog-panel{
+    position:relative;max-width:30rem;width:100%;
+    background:var(--paper);border-radius:5px;border-top:3px solid var(--accent);
+    padding:2.4rem 2rem 2.1rem;box-shadow:0 30px 70px -30px rgba(29,31,26,.6);
+    transform:translateY(10px);transition:transform .25s;
+  }
+  .plan-dialog.is-visible .plan-dialog-panel{transform:translateY(0);}
+  #plan-dialog-text{
+    font-family:var(--serif);font-size:var(--step-1);line-height:1.45;
+    color:var(--ink);margin:0 0 1.6rem;
+  }
+  .plan-dialog-close{
+    position:absolute;top:.7rem;right:1rem;cursor:pointer;
+    background:transparent;border:0;font-size:1.8rem;line-height:1;color:var(--ink-soft);
+    transition:color .2s;
+  }
+  .plan-dialog-close:hover{color:var(--accent);}
   .plan-list li::before{
     content:"";position:absolute;left:0;top:.62em;
     width:.55rem;height:.55rem;border:1px solid var(--accent);
@@ -348,6 +384,7 @@
             <li>4 pieces per month</li>
             <li>800&ndash;1000 words per piece</li>
           </ul>
+          <button type="button" class="plan-btn" data-open-dialog>Get started <span class="arr">&rarr;</span></button>
         </div>
         <div class="plan">
           <p class="plan-kicker">Plan 02</p>
@@ -357,6 +394,7 @@
             <li>1500 word deep dives</li>
             <li>Includes research-backed pieces</li>
           </ul>
+          <button type="button" class="plan-btn" data-open-dialog>Get started <span class="arr">&rarr;</span></button>
         </div>
         <div class="plan">
           <p class="plan-kicker">Plan 03</p>
@@ -366,6 +404,7 @@
             <li>Decide the length of each piece</li>
             <li>Decide between opinion / research pieces</li>
           </ul>
+          <button type="button" class="plan-btn" data-open-dialog>Get started <span class="arr">&rarr;</span></button>
         </div>
       </div>
 
@@ -395,6 +434,14 @@
     <p class="foot-copy">© 2026 Riddhi Tanna</p>
     </div>
   </footer>
+
+<div class="plan-dialog" id="plan-dialog" role="dialog" aria-modal="true" aria-labelledby="plan-dialog-text" hidden>
+  <div class="plan-dialog-panel">
+    <button class="plan-dialog-close" id="plan-dialog-close" aria-label="Close">&times;</button>
+    <p id="plan-dialog-text">Contact me at <a class="inline" href="mailto:riddhitanna11@gmail.com">riddhitanna11@gmail.com</a> with your requirements and we can get started.</p>
+    <a class="btn" href="mailto:riddhitanna11@gmail.com">Email me <span class="arr">&rarr;</span></a>
+  </div>
+</div>
 
 <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
   <button class="nav-close" id="nav-close">Close</button>
@@ -429,6 +476,29 @@
       a.addEventListener('click', closeMenu);
     });
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  })();
+</script>
+<script>
+  (function(){
+    var dialog = document.getElementById('plan-dialog');
+    var closeBtn = document.getElementById('plan-dialog-close');
+    if(!dialog) return;
+    function openDialog(){
+      dialog.hidden = false;
+      requestAnimationFrame(function(){ dialog.classList.add('is-visible'); });
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDialog(){
+      dialog.classList.remove('is-visible');
+      document.body.style.overflow = '';
+      setTimeout(function(){ dialog.hidden = true; }, 250);
+    }
+    document.querySelectorAll('[data-open-dialog]').forEach(function(b){
+      b.addEventListener('click', openDialog);
+    });
+    closeBtn.addEventListener('click', closeDialog);
+    dialog.addEventListener('click', function(e){ if(e.target === dialog) closeDialog(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !dialog.hidden) closeDialog(); });
   })();
 </script>
 <script>
